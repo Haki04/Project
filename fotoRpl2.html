@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>RPL 2</title>
+        <style type="text/css" media="all">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1,h2{
+                font-family: Arial;
+                font-weight: bold;
+                letter-spacing: 7px;
+                text-align: center;
+            }
+            div.bg{
+                padding-top: 100px;
+            }
+            div.kelas{
+                position: absolute;
+                left: 20px;
+                height: 50px;
+                top: 20px;
+                background: transparant;
+                border-bottom: 4px solid white;
+                border-top: 4px solid white;
+                border-radius: 5px;
+            }
+            div.kelas h1{
+                font-size: 40px;
+                line-height: 50px;
+                
+                
+            }
+            
+            div.nama{
+                position: absolute;
+                bottom: 0;
+                background: rgba(0,0,0,.4);
+                left: 0;
+                height: 100px;
+                width: 100%;
+                transition: 2s;
+                z-index: -1;
+            }
+            h2{
+                position: relative;
+                transition: .4s;
+                color: black;
+                font-size: 1px;
+                
+            }
+            div.fotoBox:hover div.nama h2{
+                line-height: 100px;
+                font-size: 40px;
+                color: white;
+            }
+            body{
+                width: 900px;
+                margin: 10px auto;
+                background: #2E4C6D;
+            }
+            div.bd{
+                width: 100%;
+                position: relative;
+            }
+            div.atas{
+                left: 10px;
+                right: 10px;
+                height: 100px;
+                background: linear-gradient(to right,#6E3CBC,#7267CB);
+                position: fixed;
+                box-shadow: 0 6px 13px black;
+                border-radius: 20px;
+                z-index: 2;
+            }
+            
+            
+            div.content{
+                width: 100%;
+                padding-top: 50px;
+            }
+            div.fotoBox{
+                width: 400px;
+                height: 600px;
+                position: relative;
+                display: inline-block;
+                margin-left: 32px;
+                margin-bottom: 50px;
+                box-shadow: 0 0 34px black,0 10px 14px  black;
+                border-radius: 20px;
+                overflow: hidden;
+                z-index: 1;
+            }
+            div.fotoBox:hover img{
+                filter: blur(3px);
+            }
+            img{
+                height: 600px;
+                width: 400px;
+                transition: .4s;
+                position: absolute;
+            }
+            div.fotoBox:hover img{
+                transform: translate(0,-100px);
+            }
+            ul li{
+                margin-left: 13px;
+            } 
+            ul li,a{
+                text-decoration: none;
+                list-style: none;
+                color: black;
+                display: relative;
+                display: inline-block;
+                font-family: Arial;
+                font-size: 20px;
+                
+            } 
+            h3{
+                font-weight: bold;
+            }
+            div.lis{
+                position: absolute;
+                height: 40px;
+                background: transparant;
+                right: 10px;
+                top: 20px;
+            }
+            span{
+                padding: 10px;
+                line-height: 40px;
+                transition: .8s;
+            }
+            span:hover{
+                background: #009DAE;
+                border-bottom: 4px solid #FF5403;
+                border-radius: 10px;
+            }
+            
+            
+            
+            /* BARU */
+            
+            input {
+                width: 50px;
+                height: 50px;
+                position: relative;
+                left: 170px;
+                display:none;
+            } 
+            input#ck:checked ~ .bd .bg{
+                background: linear-gradient(to bottom right,#22577E,#9A0680);
+            } 
+            input#ck:checked ~ .bd .cek{
+                background: #0F2C67;
+                color: white;
+            }
+            div.cek{
+                width: 110px;
+                background: white;
+                box-sizing: border-box;
+                position: fixed;
+                transform: rotate(90deg);
+                left: -20px;
+                top: 300px;
+                height: 40px;
+                border-radius: 5px;
+            }
+            label{
+                font-family: arial;
+                font-size: 40px;
+                font-weight: bold;
+                left: 2px;
+                position: relative;
+            }
+            @keyframes img{
+                0%{
+                    width: 100px;
+                    height: 400px;
+                }
+                100%{
+                    width: 540px;
+                    height: 880px;
+                }
+            }
+            img.zoom{
+                box-shadow: 0 0 12px white;
+                position: absolute;
+                left: 50%;
+                width: 0;
+                border-radius: 20px;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+            div.content #satu,#dua,#tiga,#empat,#lima,#enam,#tujuh,#delapan,#sembilan,#sepuluh{
+                left: 0;
+                top: 0;
+                position: fixed;
+                z-index: 3;
+                background: rgba(0,0,0,.7);
+            }
+            
+            /* TARGET FIX */
+            
+            #satu:target{
+                right: 0;
+                bottom: 0;
+            }
+            #dua:target{
+                right: 0;
+                bottom: 0;
+            }
+            #tiga:target{
+                right: 0;
+                bottom: 0;
+            }
+            #empat:target{
+                right: 0;
+                bottom: 0;
+            }
+            #lima:target{
+                right: 0;
+                bottom: 0;
+            }
+            #enam:target{
+                right: 0;
+                bottom: 0;
+            }
+            #tujuh:target{
+                right: 0;
+                bottom: 0;
+            }
+            #delapan:target{
+                right: 0;
+                bottom: 0;
+            }
+            #sembilan:target{
+                right: 0;
+                bottom: 0;
+            }
+            #sepuluh:target{
+                right: 0;
+                bottom: 0;
+            }
+            
+            /*TARGET IMG*/
+            
+            #satu:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #dua:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #tiga:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #empat:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #lima:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #enam:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #tujuh:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #delpan:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #sembilan:target img.zoom{
+                animation: img 1s forwards;
+            }
+            #sepuluh:target img.zoom{
+                animation: img 1s forwards;
+            }
+            
+            /* LAINNYA */
+            
+            div.view{
+                width: 100px;
+                background: orange;
+                position: absolute;
+                z-index: 1;
+                text-align: center;
+                right: 10px;
+                top: 10px;
+                border-radius: 10px;
+                
+            }
+            a.view{
+                text-decoration: none;
+                font-family: arial;
+                font-size: 30px;
+                font-weight: bold;
+                color: black;
+                
+            }
+            div.close{
+                width: 100px;
+                background: white;
+                position: absolute;
+                bottom: 100px;
+                left: 100px;
+                text-align: center;
+                height: 40px;
+                border-radius: 10px;
+            }
+            a.link{
+                color: black;
+                font-size: 30px;
+                font-family: arial;
+                font-weight: bold;
+                line-height: 40px;
+            }
+        </style>
+    </head>
+    <body >
+        
+        <input type="checkbox" name="" id="ck" />
+        
+        <div class="bd">
+            
+            
+            <div class="atas">
+                <div class="kelas">
+                <h1>XI RPL-2</h1>
+                </div>
+                <div class="lis">
+                            <ul>
+                        
+                    <li><span><a href=""><h3>Tentang</h3></a></span></li>
+                    
+                    <li><span><a href=""><h3>Cerita</h3></a></span></li>
+                    
+                    <li><span><a href=""><h3>Karakter</h3></a></span></li>
+                    
+                    <li><span><a href=""><h3>Favorite</h3></a></span></li>
+                    </ul>
+            
+                    
+                </div>
+            </div>
+            
+        
+        <div class="bg">
+            <div class="cek">
+                <label for="ck">DARK</label>
+            </div>
+            
+            <div class="content">
+                
+                
+                <div id="satu">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7VwkJZH6YXKbeCkjTYtoqziZnWj-9zvXlhXCSzRq-dkpPfMojpXQu_M8&s=10" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#satu" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7VwkJZH6YXKbeCkjTYtoqziZnWj-9zvXlhXCSzRq-dkpPfMojpXQu_M8&s=10" alt="" />
+                    
+                    <div class="nama">
+                        <h2>HAKI</h2>
+                    </div>
+                    
+                </div>
+              
+                
+                <div id="dua">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtCYko7tDSEQWrY2fENQ0aruQ4ym-1lDA_Pw&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#dua" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtCYko7tDSEQWrY2fENQ0aruQ4ym-1lDA_Pw&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>LIA</h2>
+                    </div>
+                    
+                </div>
+              
+                
+                <div id="tiga">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKRHs8deHKT4vwMGPw9aU26yqWnINu0FuGjA&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#tiga" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKRHs8deHKT4vwMGPw9aU26yqWnINu0FuGjA&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>ANDRIAN</h2>
+                    </div>
+                    
+                </div>
+              
+                
+                <div id="empat">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwzFQ9VNggYevBASlvLWSseujRmDiNN3D88w&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#empat" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwzFQ9VNggYevBASlvLWSseujRmDiNN3D88w&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>ISMI</h2>
+                    </div>
+                    
+                </div>
+              
+                <div id="lima">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfhUy9WDjbHPivEvgXFfraMT2kH4XOB8CMnQ&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#lima" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfhUy9WDjbHPivEvgXFfraMT2kH4XOB8CMnQ&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>ALDY</h2>
+                    </div>
+                    
+                </div>
+              
+                <div id="enam">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsI9InKJ_2YbLv9r1V8XN2mg79Qdcq61OGmQ&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#enam" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsI9InKJ_2YbLv9r1V8XN2mg79Qdcq61OGmQ&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>HAKI</h2>
+                    </div>
+                    
+                </div>
+              
+                <div id="tujuh">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FJlDmeuAQsJwOlit3-7eHFvcMm4PK6hfSg&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#tujuh" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FJlDmeuAQsJwOlit3-7eHFvcMm4PK6hfSg&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>HAKI</h2>
+                    </div>
+                    
+                </div>
+              
+                <div id="delapan">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaF7SI4BxTn9towK3pLkHpGOwD5ceFS_5Zyw&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#delapan" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaF7SI4BxTn9towK3pLkHpGOwD5ceFS_5Zyw&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>HAKI</h2>
+                    </div>
+                    
+                </div>
+              
+                <div id="sembilan">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgWVPxV0hREHWiETY4Kg5DhN2ft9eWaIx_0g&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#sembilan" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgWVPxV0hREHWiETY4Kg5DhN2ft9eWaIx_0g&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>HAKI</h2>
+                    </div>
+                    
+                </div>
+              
+                <div id="sepuluh">
+                        <img class="zoom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzvhHSVjjCUt4NAiQLZtGe6LAw_KHb0mIhVw&usqp=CAU" alt="" />
+                        
+                        <div class="close"><a class="link" href="#">CLOSE</a>
+                        </div>
+                    </div>
+                
+                <div class="fotoBox">
+                    <div class="view">
+                        <a href="#sepuluh" class="view">View</a>    
+                    </div>
+                    
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzvhHSVjjCUt4NAiQLZtGe6LAw_KHb0mIhVw&usqp=CAU" alt="" />
+                    
+                    <div class="nama">
+                        <h2>HAKI</h2>
+                    </div>
+                    
+                </div>
+              
+                
+               
+                
+        </div>
+            
+        </div>
+        
+        
+        
+    </body>
+</html>

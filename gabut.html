@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title>UNTUK KAMU</title>
+    <style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akebono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Yuji+Hentaigana+Akebono&display=swap');
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      body{
+        width: 900px;
+        margin: 100px auto;
+        background: #35589A;
+      }
+      .bg{
+       width: 740px;
+       background: #DB6B97;
+       box-shadow: 0 0 34px #DB6B97;
+       margin: auto;border-radius: 30% 60% 40% 50% / 80% 50% 80% 60% ;
+       padding-top: 40px;
+       box-sizing: border-box;
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%,-50%);
+      }
+      .content{
+       background: #FFAFAF;
+       width: 700px;
+       border-radius: 50% 60% 40% 80% / 70% 70% 80% 60%;
+       margin:  auto;
+       height: 700px;
+       padding: 10px 0 0 0;
+       text-align: center;
+      }
+      .contentDua{
+       background: rgba(0,0,0,.4);
+       margin:  auto;
+       top: 40px;
+       width: 400px;
+       text-align: center;
+       height: 100px;
+       border-radius: 20px;
+       position: relative;
+       
+      }
+      #i{
+       animation: i 2s forwards;
+       transition: 1s;
+      }
+      @keyframes i{
+       100%{
+        width: 400px;
+        overflow: hidden;
+        height: 100px;
+        border-radius: 20% 40% 10% 30% / 76% 28% 80% 20%;
+        background: linear-gradient(to right,#F5EEDC,#F6F2D4);
+       }
+      }
+      .btn{
+       width: 30%;
+       font-family: 'Oooh Baby', cursive;
+       height: 70px;
+       font-size: 40px;
+       font-weight: bold;
+       color: black;
+       border-radius: 30px;
+       text-decoration: none;
+       border: none;
+       position: relative;
+       top: -20px;
+       
+       
+      }
+      img{
+       width: 0;
+       border-radius: 57% 64% 30% 80% / 30% 79% 80% 60%;
+       height: 0;
+       margin-bottom: 40px;
+       position: relative;
+       box-shadow: 0 0 74px #FFB5B5;
+       top: -100px;
+      }
+      #im{
+       animation: im 1s forwards;
+       transition: 1s;
+      }
+      @keyframes im{
+       100%{
+        width: 500px;
+        height: 500px;
+        border: 4px solid black;
+       }
+      }
+      h1{
+       font-family: 'Yuji Hentaigana Akebono', cursive;
+       font-weight: bold;
+       letter-spacing: 4px;
+       font-size: 60px;
+       color: black;
+       line-height: 100px;
+       
+      }
+      
+      #h{
+       animation: h 1s forwards;
+       transition: .8s;
+      }
+      
+      @keyframes h{
+       100%{
+        background: #1A374D;
+        color: white;
+        width: 300px;
+        box-shadow: 0 0 14px #000B49;
+        border-radius: 50% 60% 40% 80% / 40% 20% 50% 30%;
+       
+       }
+      }
+      audio{
+       position: relative;
+       top: 100px;
+       left: 30%;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="content">
+          <img src="https://1.bp.blogspot.com/-KCOQ_OEa9SY/XcLzCWOIpeI/AAAAAAAADFA/7YN_U3LwVUYuVaBGgN318KcZUMa66kmmwCLcBGAsYHQ/s640/tenor%2B%252813%2529.gif" alt="" />
+         <br> <button class="btn" type="button">TEKEN</button>
+      </div>
+      <div class="contentDua" >
+       
+      </div>
+      <audio controls>
+      <source src="lagu.mp3" type="audio/mp3" media="" />    </audio>
+    </div>
+    
+  </body>
+  <script type="text/javascript" charset="utf-8">
+   //alert(" hay ini ada sesuatu buat kamu yang special bagiku");
+   let kata = document.querySelector(".contentDua");
+   let tombol = document.querySelector("button");
+   let ct = document.querySelector(".contentDua");
+   let mg = document.querySelector("img");
+   const mr = document.createElement("marquee");
+   const kt = document.createElement("h1");
+   const ki = document.createTextNode('Aku Sayang Kamu :)')
+   const hem = kata.appendChild(mr);
+   const him = mr.appendChild(kt);
+   tombol.addEventListener("click",function(){
+    kt.appendChild(ki);
+    kata.style.boxShadow = "0 0 12px #676FA3"
+    tombol.setAttribute('id','h');
+    tombol.innerHTML = "hehehe";
+    ct.setAttribute('id','i');
+    mg.setAttribute('id','im');
+   });
+  </script>
+</html>

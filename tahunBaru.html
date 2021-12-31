@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Hari Ulang Tahun Ku</title>
+        <style type="text/css" media="all">
+        @import url('https://fonts.googleapis.com/css2?family=Licorice&family=Moon+Dance&family=Pushster&family=The+Nautigal&family=Vujahday+Script&family=Yuji+Hentaigana+Akebono&display=swap');
+        
+            *{
+              padding: 0;
+              margin: 0;
+              
+            }
+            body{
+              width: 1500px;
+              height: 1500px;
+              background: #000B49;
+              margin: auto;
+              padding: 30px;
+              position: relative;
+            }
+            .bg{
+              background: transparant;
+              height: 1500px;
+              width: 1500px;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+              box-sizing: border-box;
+            }
+            .content{
+              background: transparant;
+              position: absolute;
+              width: 1400px;
+              height: 500px;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+              
+            }
+            ul li{
+              text-decoration: none;
+              list-style: none;
+              display: inline-block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+
+            }
+            .hari{
+              left: 14%;
+            }
+            .jam{
+              left: 38%;
+            }
+            .menit{
+              left: 62%;
+            }
+            .detik{
+              left: 86%;
+            }
+            li span{
+              background: linear-gradient(to bottom right,#370665,
+              #161E54);
+              display: inline-block;
+              box-sizing: border-box;
+              height: 400px;
+              width: 300px;
+              padding: 10px;
+              position: relative;
+              border-radius: 20px;
+              box-shadow: 0 0 12px black;
+              overflow: hidden;
+            }
+            li{
+              box-shadow: 0 0 72px #370665;
+            }
+            h2{
+              position: relative;
+              display: inline-block;
+              font-size: 245px;
+              line-height: 300px;
+              font-family: arial;
+              text-align: center;
+              
+            }
+            h3{
+              position: absolute;
+              bottom: 10px;
+              font-size: 70px;
+              font-family: Sans-Serif;
+              color: #F7F7F7;
+              font-weight: 600;
+            }
+            h1{
+              text-align: center;
+              position: relative;
+              top: 200px;
+              font-size: 100px;
+              font-family: arial;
+              font-weight: 900;
+              color: white;
+            }
+            li.hari h3{
+              left: 21%;
+            }
+            li.jam h3{
+              left: 24%;
+            }
+            li.menit h3{
+              left: 17%;
+            }
+            li.detik h3{
+              left: 18%;
+            }
+            
+            div.mr{
+              width: 600px;
+              margin: auto;
+              position: absolute;
+              bottom: 100px;
+              left: 30%;
+              background: transparant;
+            }
+            h4{
+              font-family: arial;
+              font-weight: bold;
+              color: white;
+              font-size: 70px;
+              
+            }
+            
+            .fix{
+            	position: fixed;
+            	background: transparent;
+            	box-sizing: border-box;
+            	overflow: hidden;
+            	z-index: 1;
+            	text-align: center;
+            }
+            #fix{
+            	animation: fix 1s .2s forwards;
+            	transition: .5s;
+            }
+            
+            
+            @keyframes fix{
+            	100%{
+            		bottom: 0;
+            		top: 0;
+            		left: 0;
+            		right: 0;
+            		background: rgba(0,0,0,.8);
+            	}
+            }
+            
+            img{
+            	position: absolute;
+            }
+            
+            img.satu{
+            	width: 0;
+            	height: 400px;
+            	left: 0;
+            	
+            }
+            img.dua{
+            	width: 0;
+            	z-index: -1;
+            	border-radius: 50%;
+             top: 50%;
+             transform: translate(-50%,-50%);
+             left: 50%;
+            }
+            
+            .tiga{
+            	left: 70px;
+            	bottom: 200px;
+            	height: 500px;
+            	width: 500px;
+            	border-radius: 50%;
+            }
+            #tiga{
+            	transition: 1s;
+            	animation: tiga 15s 5s linear infinite;
+            }
+            
+            @keyframes tiga {
+            	100%{
+            		transform: rotate(360deg);
+            	}
+            }
+            
+            
+            .tiga,.empat{
+            	z-index: -1;
+            	box-shadow: 0 0 22px white;
+            }
+            
+            .empat{
+            	right: 70px;
+            	top: 300px;
+            	height: 500px;
+            	width: 500px;
+            	border-radius: 50%;
+            }
+            
+            #empat{
+            	transition: 1s;
+            	animation: empat 13s 5s linear infinite;
+            }
+            
+            @keyframes empat {
+            	100%{
+            		transform: rotate(-360deg);
+            	}
+            }
+            
+            .dua{
+            	animation: dua 2s 4s forwards;
+            	transition: 1s;
+            }
+     
+            @keyframes dua{
+            	100%{
+            	width: 990px;
+            	height: 990px;
+            	}
+            }
+            
+            .tH{
+            	animation: tH 1s .9s forwards;
+            	transition: 1s;
+            }
+            
+            
+            @keyframes tH{
+            	100%{
+            	top: 50%;
+            	left: 50%;
+            	transform: translate(-50%,-50%);
+            	width: 600px;
+            	}
+            }
+            
+            .fix h1{
+            	font-size:  2em;
+            	color: white;
+            	letter-spacing: 5px;
+           	animation: h1 3s 2s  infinite, h1D 3s 2s forwards;
+            transition: 1s;
+            z-index: 5;
+            }
+            
+            @keyframes h1D{
+            	100%{
+            		font-size: 4em;
+            	}
+            }
+            
+            @keyframes h1 {
+            	0%{
+            		font-family: 'Yuji Hentaigana Akebono', cursive;
+            	}
+            	20%{
+            		font-family: 'Vujahday Script', cursive;
+            	}
+            	40%{
+            		font-family: 'The Nautigal', cursive;
+            	}
+            	60%{
+            		font-family: 'Pushster', cursive;
+            	}
+            	80%{
+            		font-family: 'Moon Dance', cursive;
+            	}
+            	100%{
+            		font-family: 'Licorice', cursive;
+            	}
+            }
+            
+            .fixB{
+            	position: fixed;
+            	left: 50%;
+            	top: 50%;
+            	transform: translate(-50%,-50%);
+            	background: rgba(0,0,0,.6);
+            	height: 100%;
+            	width: 0;
+            	z-index: 1;
+            }
+            button{
+            	width: 0;
+            	height: 200px;
+            	font-weight: bold;
+            	background: #BAABDA;
+            	color: black;
+            	font-size: 6em;
+            	font-family: 'Moon Dance', cursive;
+            	left: 50%;
+            	position: absolute;
+            	top: 50%;
+            	border: none;
+            	border-radius: 80% 50% 60% 40% / 70% 96% 80% 54%;
+            	transform: translate(-50%,-50%);
+            	
+            }
+            
+            #btn{
+            	animation: warnaB 2s forwards;
+            	transition: 1s;
+            }
+            
+            @keyframes warnaB{
+            	0%{
+            		box-shadow: 0 0 10px #CCD1E4;
+            	}
+            	10%{
+            		box-shadow: 0 0 20px #CCD1E4;
+            	}
+            	20%{
+            		box-shadow: 0 0 30px #CCD1E4;
+            	}
+            	30%{
+            		box-shadow: 0 0 40px #CCD1E4;
+            	}
+            	40%{
+            		box-shadow: 0 0 50px #CCD1E4;
+            	}
+            	50%{
+            		box-shadow: 0 0 60px #CCD1E4;
+            	}
+            	60%{
+            		box-shadow: 0 0 70px #CCD1E4;
+            	}
+            	70%{
+            		box-shadow: 0 0 80px #CCD1E4;
+            	}
+            	80%{
+            		box-shadow: 0 0 90px #CCD1E4;
+            	}
+            	90%,100%{
+            		box-shadow: 0 0 100px #CCD1E4;
+            	}
+            	
+            }
+            .pem{
+            	width: 80%;
+            	height: 30%;
+            	position: absolute;
+            	background: transparent;
+            	top: 50%;
+            	left: 50%;
+            	z-index: 1;
+            	text-align: center;
+            	transform: translate(-50%,-50%);
+            	
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+    	
+    
+    <div class="fixB">
+    	 <button type="submit" data-Play="false" onclick="play()"></button>
+    	 
+  <audio id="audio" src="https;//haki04.github.io/Project/tH.mp3"  />
+  <audio id="audio2" src="https;//haki04.github.io/Project/tH2.mp3">
+    </div>
+
+    
+     	
+    	
+   <div class="fix">
+   	
+    		
+    		<h1></h1>
+    		<div class="pem">
+    			
+ 		<img  class="satu" src="https://c.tenor.com/3eG6HZWnxeYAAAAi/minka-happy.gif" alt="" />
+    		</div>
+    		
+    		<img class="dua" id="img2"  src="https://i.pinimg.com/originals/3f/78/82/3f788285d399479e9a136b118493a85f.gif" alt="" />
+    	<img class="tiga" src="https://c.tenor.com/My6kyhQLcQUAAAAC/kanna-anime.gif" alt="" />
+    	<img src="https://bang-phinf.pstatic.net/a/3299e6/2_402Ud018bnglk8ywy7uummv_q6b89s.gif" alt="" class="empat">
+    	</div>
+     	
+
+    
+
+
+        <div class="bg">
+          <h1>MENUJU > 2022</h1>
+            <div class="content">
+              <ul>
+              <li class="hari"><span><h2 id="hari">00</h2><h3>HARI</h3></span></li>
+              <li class="jam"><span><h2 id="jam">00</h2><h3>JAM</h3></span></li>
+              <li class="menit"><span><h2 id="menit">00</h2><h3>MENIT</h3></span></li>
+              <li class="detik"><span><h2 id="detik">00</h2><h3>DETIK</h3></span></li>
+            </ul>
+            
+            </div>
+        <div class="mr">
+          <marquee>
+            <h4>di buat oleh HAKI</h4>
+          </marquee>
+        </div>
+          
+        </div>
+        
+       
+        
+    </body>
+    
+   <script type="text/javascript" charset="utf-8">
+  
+            
+        const waktuH = new Date("Dec 31, 2021, 09:59:00").getTime();
+        const fixB = document.querySelector('.fixB');
+        const button = document.querySelector('button');
+        const fix = document.querySelector('.fix');
+        const h1 = fix.querySelector('h1');
+        ;
+        const img = fix.querySelector('img');
+        const h1B = document.querySelector('.bg h1');
+        const img2 = fix.querySelector("#img2");
+        const myAu = document.querySelector('#audio');
+        const myAu2 = document.querySelector("#audio2");
+        const imgTiga = fix.querySelector('.tiga');
+        const imgEmpat = fix.querySelector('.empat');
+        
+        
+   
+   const play = () => {      
+      const dataPlay = button.getAttribute('data-play');
+            
+      if(dataPlay === 'false') {
+       	button.setAttribute('data-play', 'true');
+        myAu.play();
+        myAu2.play();
+      } else {
+        button.setAttribute('data-play', 'false');
+        myAu.pause();
+        myAu2.pause();
+      }
+    };
+    
+   
+        
+        
+    const HBD = setInterval (function(){
+        const waktuS = new Date().getTime();
+        
+        const hasil = waktuH - waktuS;
+        const hari = Math.floor(hasil / (1000* 60 * 60 *24));
+        
+        const jam = Math.floor(hasil % (1000* 60 * 60 *24) /(1000 * 60 * 60));
+        
+        const menit = Math.floor(hasil % (1000 * 60 * 60 ) / (1000 * 60));
+        
+        const detik = Math.floor(hasil % (1000 * 60) / 1000 );
+        
+        
+        
+        const hr = document.querySelector("h2#hari");
+        const jm = document.querySelector("h2#jam");
+        const mt = document.querySelector("h2#menit");
+        const dtk = document.querySelector("h2#detik");
+        
+        
+        hr.innerHTML = hari;
+        jm.innerHTML = jam;
+        mt.innerHTML = menit;
+        dtk.innerHTML = detik;
+        
+        
+        hr.style.color = "#F6D7A7";
+        jm.style.color = "#FF5F7E";
+        mt.style.color = "#C85C5C";
+        dtk.style.color = "#6166B3";
+        
+        if ( hasil <= 0 ){
+          clearInterval(HBD);
+          hr.innerHTML = "00";
+          jm.innerHTML = "00";
+          mt.innerHTML = "00";
+          dtk.innerHTML = "00";
+          fixB.style.width = "100%";
+          button.style.width = "500px";
+          button.setAttribute('id', "btn");
+          button.innerHTML = "TEKEN";
+        }
+        
+        },1000);
+        
+        
+          button.addEventListener("click",function(){
+        			img.setAttribute('class', 'tH');
+        			img2.setAttribute('class', 'dua');
+       			 fix.setAttribute('id',"fix");
+       			 
+       			 
+          fixB.style.width = "0";
+          button.style.width = "0";
+          button.removeAttribute('id', "btn");
+          button.innerHTML = "";
+          h1B.innerHTML = "SELAMAT TAHUN BARU";
+          h1.innerHTML = "SELAMAT DATANG DI TAHUN 2022";
+          imgTiga.setAttribute('id', 'tiga');
+          imgEmpat.setAttribute('id', 'empat');
+          }); 
+        
+    </script>
+     
+</html>

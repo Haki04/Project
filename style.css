@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: arial;
 }
 
 .container{
@@ -65,7 +64,7 @@ div.p .cari{
     margin: 10px;
 }
 h2{
-    font-size: 8px;
+    font-size: 6px;
     position: absolute;
     left: 50%;
     top: 95%;

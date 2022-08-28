@@ -6,62 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HAKI</title>
      <style type="text/css" media="all">
+@import url('https://fonts.googleapis.com/css2? family= Rubik+Tertekan & display=swap');
+
 *{
-    padding: 0;
     margin: 0;
-    font-family: arial;
+    padding: 0;
     box-sizing: border-box;
+    font-family: arial;
 }
+
 .container{
+    background-image: url('img/aw.png');
+    height: 100VH;
     width: 100%;
-    height: 100vh;
-    background: #B1D7B4;
     overflow: hidden;
-    display: flex;
-    background-repeat: repeat-y;
-    justify-content: center;
     position: relative;
+    text-align: center;
+    animation: bg 7s infinite;
+}
+@keyframes bg{
+    to{
+        background-position: 100% 0;
+    }
+}
+.container h1{
+    margin-top: 60px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size:  2em;
+    font-family: 'Rubik Tertekan', kursif;
+}
+.container div.p input{
+    width: 300px;
+    height: 50px;
+    padding: 2px 2px 2px 4px;
+    background: linear-gradient(to left, #fff, #eee);
+    border: none;
+    font-size: 18px;
+    box-shadow: 1px 1px 2px white,-1px -1px 2px white;
+    border-radius: 5px;
+}
+div.p{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 10px;
+}
+div.p .cari{
+    width: 60px;
+    margin-top: -8px;
+    height: 60px;
     
 }
-.atas{
-    width: 90%;
-    background: #7FB77E;
-    padding: 4px;
-    height: 40px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.container img.satu,img.dua{
+    width: 150px;
+    margin: 40px;
+    width: 150px;
+    border-radius: 10px;
+    opacity: 0;
 }
-span{
- font-size: 16px;
- 
+.container p{
+    opacity: 0;
+    font-size: 30px;
+    color: black;
+    margin: 10px;
 }
-button{
-    width: 70px;
-    height: 50px;
+h2{
+    font-size: 14px;
     position: absolute;
-    bottom: 20%;
-    border: none;
-    border-radius: 20px;
-    background: #FFC090;
-    font-weight: bold;
-}
-.fix{
-    width: 0;
-    height: 0;
-    position: fixed;
-    z-index: 999;
-    background: rgba(0,0,0,.3);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-img{
-    width: 100px;
-    height: 120px;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
 }
      </style>
 

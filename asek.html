@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dzikir</title>
+    <style type="text/css" media="all">
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: arial;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: #B1D7B4;
+            overflow: hidden;
+            display: flex;
+            background-repeat: repeat-y;
+            justify-content: center;
+            position: relative;
+
+        }
+        .atas {
+            width: 90%;
+            background: #7FB77E;
+            padding: 4px;
+            height: 40px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        span {
+            font-size: 16px;
+
+        }
+        button {
+            width: 70px;
+            height: 50px;
+            position: absolute;
+            bottom: 20%;
+            border: none;
+            border-radius: 20px;
+            background: #FFC090;
+            font-weight: bold;
+        }
+        .fix {
+            width: 0;
+            height: 0;
+            position: fixed;
+            z-index: 999;
+            background: rgba(0,0,0,.3);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+        img {
+            width: 100px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fix">
+            <img src="https://i.gifer.com/RqUr.gif" alt="" />
+            <img src="https://i.gifer.com/xz.gif" alt="" />
+            <img src="https://i.gifer.com/7Uz.gif" alt="" />
+            <marquee>
+                <img src="https://i.gifer.com/1Khd.gif" alt="">
+                <img src="https://i.gifer.com/xw.gif" alt="">
+                <img src="https://i.gifer.com/ywB.gif" alt="">
+                <img src="https://i.gifer.com/y5.gif" alt="">
+                <img src="https://i.gifer.com/JUd.gif" alt="">
+            </marquee>
+            <img src="https://i.gifer.com/1uIn.gif" alt="" />
+            <img src="https://i.gifer.com/X5NZ.gif" alt="" />
+            <audio src="mbk.mp3" data-Play='false'></audio>
+
+        </div>
+        <div class="atas">
+            <span class="jumlah"></span>
+            <span class="waktu"></span>
+        </div>
+        <button class="btn">Tab tab Aku</button>
+    </div>
+    <script>
+
+        const btn = document.querySelector('button')
+        const fix = document.querySelector('.fix')
+        const audio = document.querySelector('audio')
+        const span = document.querySelector('span.jumlah')
+        const spanW = document.querySelector('span.waktu')
+        let banyak = 0;
+        btn.addEventListener('click', ()=> {
+            banyak++;
+            btn.classList.toggle('anim')
+            span.innerHTML = `Skor ${banyak}`;
+
+        })
+        let count = 10;
+        let st = setInterval(()=> {
+            spanW.innerHTML = `Waktu ${count}`;
+            count--;
+            if (count == 0) {
+                clearInterval(st);
+                spanW.innerHTML = `Waktu Anda Habis`;
+
+                fix.style.width = '100%';
+                fix.style.height = '100vh';
+
+
+                const playdata = () => {
+                    const dataPlay = audio.getAttribute('data-Play');
+
+                    if (dataPlay === 'false') {
+                        audio.setAttribute('data-Play', 'true');
+                        audio.play()
+                    }
+                }
+                playdata();
+
+            }
+
+        }, 1000)
+
+    </script>
+</body>
+</html>

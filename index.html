@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HAKI</title>
+     <style type="text/css" media="all">
+*{
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #B1D7B4;
+    overflow: hidden;
+    display: flex;
+    background-repeat: repeat-y;
+    justify-content: center;
+    position: relative;
+    
+}
+.atas{
+    width: 90%;
+    background: #7FB77E;
+    padding: 4px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+span{
+ font-size: 16px;
+ 
+}
+button{
+    width: 70px;
+    height: 50px;
+    position: absolute;
+    bottom: 20%;
+    border: none;
+    border-radius: 20px;
+    background: #FFC090;
+    font-weight: bold;
+}
+.fix{
+    width: 0;
+    height: 0;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0,0,0,.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+img{
+    width: 100px;
+    height: 120px;
+}
+     </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Pacuan</h1>
+        <div class="p">
+
+            <input type="text" name="cari" id="cari" placeholder="Masukkan kata kunci" autofocus required />
+            <img class="cari" src="img/cari.png" alt="">
+        </div>
+        <p>
+            Hasil pencarian Anda dari "<span id="span"></span>"
+        </p>
+        <!-- <img class="satu" src="img/a.png" alt="" /> -->
+        <img class="dua" src="https://c.tenor.com/_28zih0m0WkAAAAM/patrick-patrick-star.gif" alt="">
+
+
+    </div>
+    <h2>Dibuat Oleh HAKI Ganteng</h2>
+    <script>
+        const cari = document.querySelector('.cari');
+        const img = document.querySelector('.dua');
+        const input = document.querySelector('input');
+        const span = document.querySelector('.container p #span');
+        const p = document.querySelector('p');
+
+        cari.addEventListener('click', ()=> {
+            const s = document.querySelector('input#cari').value;
+
+            img.style.opacity = '1';
+            p.style.opacity = '1';
+            span.innerHTML = s;
+        })
+    </script>
+</body>
+</html>

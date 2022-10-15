@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Semangat</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			width: 100%;
+			background-image:linear-gradient(to bottom right,#3d5b63, #385781);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			
+		}
+		marquee{
+			font-family: arial;
+			font-weight: bold;
+			font-size: 28px;
+			width: 100%;
+			color: white;
+			font-style: italic;
+			letter-spacing: 4px;
+			
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<!-- gani ne jal .mp3 ne -->
+		<audio src="lagu.mp3" data-mutar="false" loop="" ></audio>
+		
+<marquee behavior="" direction="" scrollamount="9">Semangat ya kamu itu hebat 🤗</marquee>
+	<script>
+		
+		const lagu = document.querySelector("audio")
+		//alert(lagu)
+		
+		let co = 0
+					let data = lagu.getAttribute("data-mutar")
+			if(co <= 0){
+				(function(){
+					if(data == 'false'){
+					 lagu.play()
+					}
+					
+				}())
+					
+				
+			}
+		
+	</script>
+	
+</body>
+</html>

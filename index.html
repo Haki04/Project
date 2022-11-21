@@ -2,117 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HAKI</title>
-     <style type="text/css" media="all">
-@import url('https://fonts.googleapis.com/css2? family= Rubik+Tertekan & display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: arial;
-}
-
-.container{
-    background-image: url('aw.png');
-    height: 100VH;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    animation: bg 7s infinite;
-}
-@keyframes bg{
-    to{
-        background-position: 100% 0;
-    }
-}
-.container h1{
-    margin-top: 60px;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size:  2em;
-    font-family: 'Rubik Tertekan', kursif;
-}
-.container div.p input{
-    width: 300px;
-    height: 50px;
-    padding: 2px 2px 2px 4px;
-    background: linear-gradient(to left, #fff, #eee);
-    border: none;
-    font-size: 18px;
-    box-shadow: 1px 1px 2px white,-1px -1px 2px white;
-    border-radius: 5px;
-}
-div.p{
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    padding: 10px;
-}
-div.p .cari{
-    width: 60px;
-    margin-top: -8px;
-    height: 60px;
-    
-}
-.container img.satu,img.dua{
-    width: 150px;
-    margin: 40px;
-    width: 150px;
-    border-radius: 10px;
-    opacity: 0;
-}
-.container p{
-    opacity: 0;
-    font-size: 30px;
-    color: black;
-    margin: 10px;
-}
-h2{
-    font-size: 8px;
-    position: absolute;
-    left: 50%;
-    top: 95%;
-    transform: translate(-50%, -50%);
-}
-     </style>
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="gambar_icon.png">
+    <title>Games</title> 
 </head>
 <body>
-    <div class="container">
-        <h1>Pacuan</h1>
-        <div class="p">
+    
+    <div class="cover">
+    	<div class="mar">
+    		<marquee  scrollamount="5">Dibuat oleh haki masih 70%</marquee>
+    	</div>
+        <div class="content">
+            <div class="top">
+                <div class="fixed2"></div>
+                <span>
+                    <h1>Lawan : <span id="lawan">-</span></h1>
+                </span>
+                <span>
+                    <h1 id="t">-</h1>
+                </span>
+                <span>
+                    <h1>Kamu : <span id="kamu">-</span></h1>
+                </span>
+            </div>
+            <div class="jari kiri">
+                <img src="" alt="">
+            </div>
+            <div class="ket">
+                <img src="" alt="">
+            </div>
+            <div class="jari kanan">
+                <img src="" alt="">
 
-            <input type="text" name="cari" id="cari" placeholder="Masukkan kata kunci" autofocus required />
-            <img class="cari" src="cari.png" alt="">
+            </div>
+
+            <div class="pilihan">
+                <div class="fixed">
+                    <button onclick="return window.location.reload()">Main Lagi</button>
+                </div>
+                
+                <span data-pilihan="batu" id="batu" onclick="play_games(random_pilihan,this.getAttribute('data-pilihan'))"><img src="batu.png" alt="" ></span>
+                <span data-pilihan="gunting" id="gunting" onclick="play_games(random_pilihan,this.getAttribute('data-pilihan'))"><img src="gunting.png" alt="" ></span>
+                <span data-pilihan="kertas" id="kertas" onclick="play_games(random_pilihan,this.getAttribute('data-pilihan'))"><img src="kertas.png" alt="" ></span>
+            </div>
         </div>
-        <p>
-            Hasil pencarian Anda dari "<span id="span"></span>"
-        </p>
-        <!-- <img class="satu" src="a.png" alt="" /> -->
-        <img class="dua" src="https://c.tenor.com/_28zih0m0WkAAAAM/patrick-patrick-star.gif" alt="">
 
 
     </div>
-    <h2>Dibuat Oleh HAKI Ganteng</h2>
-    <script>
-        const cari = document.querySelector('.cari');
-        const img = document.querySelector('.dua');
-        const input = document.querySelector('input');
-        const span = document.querySelector('.container p #span');
-        const p = document.querySelector('p');
 
-        cari.addEventListener('click', ()=> {
-            const s = document.querySelector('input#cari').value;
-
-            img.style.opacity = '1';
-            p.style.opacity = '1';
-            span.innerHTML = s;
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

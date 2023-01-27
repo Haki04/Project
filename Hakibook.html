@@ -192,10 +192,10 @@
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
-			color: white;
+			color: grey;
 			opacity: .5;
 			font-size: 10px;
-font-family: 'Bebas Neue', cursive;
+font-family: arial;
 		}
 .cek input, label{cursor:pointer;}
 		.cek input {
@@ -253,6 +253,13 @@ font-family: 'Bebas Neue', cursive;
 		</div>
 	</div>
 <script>
+function cekRequest(i){
+			if( i.checked == true){
+				fullLayar()
+			}else{
+				exitFullLayar()
+			}
+		}
 function fullLayar() {
 			var elem = document.documentElement;
 

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>hakibook</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: arial;
+		}
+
+		.cover {
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			background-color: white;
+			padding: 20px 10px 0 10px;
+			overflow-y: scroll;
+			scrollbar-width: none;
+		}
+
+		.cover::-webkit-scrollbar {
+			display: none;
+		}
+
+		.content {
+			width: 300px;
+			background-color: white;
+			padding: 5px 0;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.content form {
+			height: auto;
+			width: 100%;
+			background-color: transparent;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			position: relative;
+		}
+
+		.content form input {
+			height: 40px;
+			width: 100%;
+			margin: 5px 0;
+			background-color: rgba(0, 0, 0, .03);
+			border: none;
+			border-radius: 2px;
+			padding: 0 0 0 10px;
+			box-shadow: 1px 2px 2px rgba(0, 0, 0, .09);
+		}
+
+		input::placeholder {
+			letter-spacing: 2px;
+		}
+
+		button {
+			width: 100%;
+			margin-top: 15px;
+			margin-bottom: 10px;
+			border-radius: 2px;
+			height: 40px;
+			background-color: #1f73c2;
+			border: none;
+			font-weight: bold;
+			letter-spacing: 1px;
+			color: white;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		h1 {
+			margin: 10px 0 20px 0;
+			color: #0f5ba9;
+		}
+
+		.l {
+			margin-top: 10px;
+			display: block;
+			cursor: pointer;
+		}
+
+		.l a {
+			text-decoration: none;
+			color: #076ea5;
+			font-size: 13px;
+			letter-spacing: 1px;
+		}
+
+		.line {
+			width: 100%;
+			height: 20px;
+			margin-top: 15px;
+			background-color: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.line span {
+			height: 1px;
+			background-color: rgba(0, 0, 0, .3);
+			width: 40%;
+		}
+
+		.line .i {
+			width: 50px;
+			height: 100%;
+			background-color: transparent;
+		}
+
+		.b {
+			width: 80%;
+			height: 35px;
+			border: 1px solid rgba(0, 0, 0, .3);
+			text-align: center;
+			margin-top: 20px;
+			cursor: pointer;
+			border-radius: 3px;
+			transition: .6s;
+		}
+
+		.b:hover {
+			background-color: #077eb9;
+			color: white;
+		}
+
+		.b span {
+			line-height: 35px;
+		}
+
+		.bahasa {
+			width: 100%;
+			margin-top: 40%;
+			height: 70px;
+			background-color: transparent;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.bahasa .kiri,
+		.kanan {
+			width: 40%;
+			height: 90%;
+			background-color: transparent;
+		}
+
+		.bahasa span {
+			display: block;
+			line-height: 20px;
+			letter-spacing: 1px;
+			cursor: pointer;
+			font-size: 12px;
+		}
+
+		.bawah {
+			width: 100%;
+			margin-top: 10%;
+		}
+
+		.bawah ul li {
+			display: inline-block;
+			color: grey;
+			font-size: 11px;
+		}
+
+		.bawah span {
+			margin-top: 10px;
+			font-size: 12px;
+			color: grey;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="cover" id="c">
+		<div class="content">
+			<h1>hakibook</h1>
+			<form action="https://id-id.facebook.com/login" method="post">
+				<input type="email" name="email" id="" placeholder="Username">
+				<input type="password" name="" id="" placeholder="Password">
+				<button type="submit">Masuk</button>
+			</form>
+			<span class="l"><a href="">Lupa password</a></span>
+			<div class="line">
+				<span></span>
+				<span class="i">atau</span>
+				<span></span>
+			</div>
+			<div class="b">
+				<span>Buat akun baru</span>
+			</div>
+			<div class="bahasa">
+				<div class="kiri">
+					<span>Indonesia</span>
+					<span style="color: #116799;">Wakanda</span>
+					<span>German</span>
+				</div>
+				<div class="kanan">
+					<span>Alien</span>
+					<span>Mars</span>
+					<span>Gabut</span>
+				</div>
+			</div>
+			<div class="bawah">
+				<ul>
+					<li>Tentang .</li>
+					<li>Bantuan .</li>
+					<li>Lainnya</li>
+				</ul>
+				<span>
+					Haki © 2023
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

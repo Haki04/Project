@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>WhatsApp</title>
+	<style>
+	:root{
+		--backGroundChat:#121B22;
+		--navBar: #1F2C34;
+	}
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: Arial;
+		}
+		.cover{
+			width: 100%;
+			height: 100vh;
+			background-color: grey;
+			display: flex;
+			justify-content: center;
+			padding: 10% 0;
+		} 
+   .content{
+   	height: 600px;
+   	width: 300px;
+   	position: relative;
+   	overflow: hidden;
+   	border-radius: 10px;
+   	background-color: var(--backGroundChat);
+   }
+   .content .atas{
+   	width: 100%;
+   	height: 90px;
+   	background-color: var(--navBar);
+   	position: relative;
+   }
+   .satu{
+   	width: 100%;
+   	height: 60%;
+   	background-color: transparent;
+   	display: flex;
+   	justify-content: space-between;
+   	align-items: center;
+   	padding: 0 5px 0 10px;
+   	
+   }
+   .satu h1{
+   	font-size: 17px;
+   	text-shadow: 0 0 2px white;
+   }
+   .satu .logo{
+   	background-color: transparent;
+   	display: flex;
+   	justify-content: space-around;
+   	align-items: center ;
+   	width: 100px;
+   }
+   .logo img{
+   	width: 20px;
+   }
+   .dua{
+   	width: 100%;
+   	background-color: transparent;
+   	position: absolute;
+   	bottom: 0;
+   	height: 30px;
+   	
+   }
+   .dua ul{
+   	display: flex;
+   	justify-content: space-around;
+   	width: 100%;
+   	align-items: center;
+   }
+   .dua ul li{
+   	list-style: none;
+   	font-size: 10px;
+   	font-weight: bold;
+   	text-shadow: 0 0 2px white;
+   	padding-bottom: 2px;
+   	cursor: pointer ;
+   }
+   .dua ul li:nth-child(2){
+   	width: 50px;
+   	text-align: center;
+   	border-bottom: 2px solid darkgreen;
+   }
+   .dua ul li img{
+   	width: 20px;
+   }
+   
+   .bawah{
+   	width: 100%;
+   	height: 500px;
+   	overflow-y: scroll;
+   	background-color: transparent;
+   }
+   .bawah .chat{
+   	width: 100%;
+   	height: 60px;
+   	background-color: transparent;
+   	position: relative;
+   	padding: 5px;
+   	border-bottom: 1px solid grey;
+   	transition: .3s;
+   }
+   .chat:hover{
+   	background-color: rgba(255,255,255, .1);
+   }
+   .chat > *:not(img){
+   	position: absolute;
+  	display: inline-block;
+  	color: white;
+   }
+   .chat #foto{
+  	width: 45px;
+  	height: 45px;
+  	top: 50%;
+  	left: 5%;
+  	transform: translateY(-50%);
+  	background-color: grey;
+  	border-radius: 50%;
+  	overflow: hidden;
+   } 
+   #foto img{
+   	width: 100%;
+   }
+   .chat #nama{
+   	left: 25%;
+   	top: 10%;
+   	font-weight: bold;
+   }
+   .chat #chatuser{
+   	left: 26%;
+   	top: 48%;
+   	font-size: 9px;
+   }
+   .chat #waktu{
+   	right: 5%;
+   	top: 8%;
+   	font-size: 8px;
+   }
+   .tambahteman{
+   	bottom: 5%;
+   	right: 5%;
+   	position: absolute;
+   	background-color: darkgreen;
+   	width: 30px;
+   	height: 30px;
+   	display: flex;
+   	justify-content: center;
+   	align-items: center;
+   	border-radius: 50%;
+   }
+   .tambahteman span{
+   	font-size: 1.3em;
+   	font-weight: bold;
+   }
+	</style>
+</head>
+<body>
+	<div class="cover">
+		<div class="content">
+			<div class="atas">
+				<div class="satu">
+					<h1>HakiApp</h1>
+					<div class="logo">
+						<img src="tiktok_wakamera.png" alt="">
+						<img src="tiktok_wacari.png" alt="">
+						<img src="tiktok_watitik.png" alt="">
+					</div>
+				</div>
+				<div class="dua">
+					<ul>
+						<li><img src="tiktok_wagrup.png" alt=""></li>
+						<li>Chat</li>
+						<li>Status</li>
+						<li>Panggilan</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bawah">
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+				<div class="chat">
+					<span id="foto">
+						<img src="tiktok_wagrup.png" alt="">
+					</span>
+					<span id="nama">Haki</span>
+					<span id="chatuser">Hai apakabar, sehat ?</span>
+					<span id="waktu">07:44</span>
+				</div>
+			</div>
+			<div class="tambahteman">
+				<span>+</span>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
